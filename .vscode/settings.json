@@ -1,0 +1,10 @@
+{
+  "csharp.format.enable": true,
+  "csharpfixformat.sort.usings.order": "System",
+  "csharpfixformat.sort.usings.enabled": true,
+  "csharpfixformat.style.newline.atEnd": true,
+  "csharpfixformat.style.spaces.afterBracket": false,
+  "csharpfixformat.style.spaces.beforeBracket": false,
+  "csharpfixformat.style.spaces.afterParenthesis": false,
+  "csharpfixformat.style.spaces.beforeParenthesis": false
+}

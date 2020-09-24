@@ -1,9 +1,7 @@
 using System;
 
-namespace test
-{
-    public class WeatherForecast
-    {
+namespace test {
+    public class WeatherForecast {
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
