@@ -1,7 +1,6 @@
-import * as React from "react"
-import { connect } from "react-redux"
+import React from "react"
 
-const Home = () => (
+export const Home = () => (
   <div>
     <h1>Hello, world!</h1>
     <p>Welcome to your new single-page application, built with:</p>
@@ -40,5 +39,3 @@ const Home = () => (
     </p>
   </div>
 )
-
-export default connect()(Home)
