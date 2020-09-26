@@ -23,7 +23,7 @@ const initialState: WeatherForecastsState = {
 }
 
 const weatherForecastsSlice = createSlice({
-  name: "weatherFoirecasts",
+  name: "weatherForecasts",
   initialState,
   reducers: {
     requestWeatherForecasts(state, action: PayloadAction<RequestWeatherForecastsPayload>) {
