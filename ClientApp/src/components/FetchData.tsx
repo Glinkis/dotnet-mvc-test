@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link, useParams } from "react-router-dom"
 
 import { ApplicationState } from "../store"
-import * as WeatherForecastsStore from "../store/WeatherForecasts"
+import { fetchWeatherForecasts } from "../store/WeatherForecasts"
 
 export const FetchData = () => {
   const dispatch = useDispatch()
@@ -12,7 +12,7 @@ export const FetchData = () => {
   const startDateIndex = parseInt(params.startDateIndex, 10) || 0
 
   useEffect(() => {
-    dispatch(WeatherForecastsStore.actionCreators.requestWeatherForecasts(startDateIndex))
+    dispatch(fetchWeatherForecasts(startDateIndex))
   }, [startDateIndex])
 
   const { isLoading, forecasts } = useSelector((state: ApplicationState) => state.weatherForecasts)
@@ -29,7 +29,7 @@ export const FetchData = () => {
           </tr>
         </thead>
         <tbody>
-          {forecasts.map((forecast: WeatherForecastsStore.WeatherForecast) => (
+          {forecasts.map((forecast) => (
             <tr key={forecast.date}>
               <td>{forecast.date}</td>
               <td>{forecast.temperatureC}</td>
