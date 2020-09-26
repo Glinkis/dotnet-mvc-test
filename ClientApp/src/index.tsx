@@ -7,13 +7,10 @@ import { configureStore } from "@reduxjs/toolkit"
 import { BrowserRouter } from "react-router-dom"
 
 import { App } from "./App"
-import { reducers } from "./store"
+import { reducer } from "./store"
 import registerServiceWorker from "./registerServiceWorker"
 
-// Get the application-wide store instance, prepopulating with state from the server where available.
-const store = configureStore({
-  reducer: reducers,
-})
+const store = configureStore({ reducer })
 
 ReactDOM.render(
   <Provider store={store}>

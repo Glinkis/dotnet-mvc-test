@@ -1,14 +1,15 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
+
 import { ApplicationState } from "../store"
-import * as CounterStore from "../store/Counter"
+import { counterActions } from "../store/Counter"
 
 export const Counter = () => {
   const dispatch = useDispatch()
   const count = useSelector((state: ApplicationState) => state.counter && state.counter.count)
 
   const increment = () => {
-    dispatch(CounterStore.actionCreators.increment())
+    dispatch(counterActions.increment())
   }
 
   return (
