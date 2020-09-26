@@ -6,7 +6,10 @@ import { counterActions } from "../store/Counter"
 
 export const Counter = () => {
   const dispatch = useDispatch()
-  const count = useSelector((state: ApplicationState) => state.counter && state.counter.count)
+
+  const count = useSelector((state: ApplicationState) => {
+    return state.counter && state.counter.count
+  })
 
   const increment = () => {
     dispatch(counterActions.increment())
