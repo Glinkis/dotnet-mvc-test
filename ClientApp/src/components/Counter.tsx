@@ -12,6 +12,10 @@ export const Counter = () => {
     dispatch(counterActions.increment())
   }
 
+  const decrement = () => {
+    dispatch(counterActions.decrement())
+  }
+
   return (
     <React.Fragment>
       <h1>Counter</h1>
@@ -24,6 +28,10 @@ export const Counter = () => {
 
       <button type="button" className="btn btn-primary btn-lg" onClick={increment}>
         Increment
+      </button>
+
+      <button type="button" className="btn btn-primary btn-lg" onClick={decrement}>
+        Decrement
       </button>
     </React.Fragment>
   )
